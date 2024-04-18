@@ -33,6 +33,8 @@ import IconMenuAuthentication from '@/components/icon/menu/icon-menu-authenticat
 import IconMenuDocumentation from '@/components/icon/menu/icon-menu-documentation';
 import { usePathname } from 'next/navigation';
 import { getTranslation } from '@/i18n';
+import Logo from '@/public/assets/images/Logo.svg';
+import Image from 'next/image';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
@@ -228,6 +230,13 @@ const Sidebar = () => {
                                             </div>
                                         </Link>
                                     </li>
+                                    <h2 className="-mx-4 mb-1 flex items-center bg-white-light/30 px-7 py-3 font-extrabold uppercase dark:bg-dark dark:bg-opacity-[0.08]">
+                                        <IconMinus className="hidden h-5 w-4 flex-none" />
+                                        <Link href="https://apprising-creatives-ten.vercel.app/">
+                                            <Image width="150px" src={Logo} />
+                                            <span>{t('Go back to Apprising Creatives')}</span>
+                                        </Link>
+                                    </h2>
                                 </ul>
                             </li>
                         </ul>
